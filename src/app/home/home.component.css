@@ -1,0 +1,159 @@
+/* Home Section with animated gradient background */
+.home-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff6b6b, #f9ca24, #3498db, #8e44ad);
+  background-size: 300% 300%;
+  animation: moveGradient 10s ease infinite;  /* Animated gradient */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;  /* Set text color to white */
+}
+
+/* Profile Picture */
+.profile-picture {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  animation: slideIn 1.2s ease-in-out;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  animation: slideIn 1.4s ease-in-out;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Highlights Section */
+.highlights-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.highlight-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.highlight-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Call to Action Button */
+.cta-button {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  margin-top: 40px;
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounceIn 1.5s ease-in-out;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #e55d51;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-15px);
+  }
+  60% {
+      transform: translateY(-7px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .highlight-item {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+}

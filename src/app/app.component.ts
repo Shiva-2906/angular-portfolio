@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NgClass, CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [CommonModule, NgClass, RouterModule]  // Ensure CommonModule, NgClass, and RouterModule are imported
 })
 export class AppComponent {
-  title = 'shiva-portfolio';
+  isMenuOpen = false;
+
+  // Toggle menu open/close
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  // Close the menu after navigation
+  closeMenuOnNavigate() {
+    this.isMenuOpen = false;
+  }
 }

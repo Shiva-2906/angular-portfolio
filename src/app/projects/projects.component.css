@@ -1,0 +1,114 @@
+/* General project page styling with an animated gradient background */
+.projects-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(120deg, #72c2d1, #005582, #00a8cc);
+  background-size: 300% 300%; /* Enlarged for smoother animation */
+  animation: gradientAnimation 10s ease infinite; /* Gradient animation */
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-subtitle {
+  font-size: 1.3em;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+}
+
+/* Styling for project cards */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #005582;
+  margin-bottom: 10px;
+}
+
+.project-role {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-details {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project-details li {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.project-details li::before {
+  content: "\2022";
+  color: #005582;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Responsive design: Adjusts for smaller screens */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    padding: 40px 10px;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+}

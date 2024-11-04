@@ -1,0 +1,15 @@
+<div class="skills-container">
+    <h1>Skills</h1>
+  
+    <!-- Loop through skill categories -->
+    <div class="skill-category" *ngFor="let category of skillCategories">
+      <h3>{{ category.name }}</h3>
+      
+      <div class="skills-list">
+        <!-- Loop through individual skills -->
+        <span class="skill" *ngFor="let skill of category.skills">
+          <i class="fas fa-check-circle"></i> {{ skill }}
+        </span>
+      </div>
+    </div>
+  </div>

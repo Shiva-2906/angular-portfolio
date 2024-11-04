@@ -1,0 +1,198 @@
+/* General section styling with animated gradient */
+section {
+  padding: 60px 30px;
+  text-align: center;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffd1ff, #c4a7e7, #a1c4fd);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #2d4059;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Animating the background gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* About Me Section */
+.about-header h1 {
+  font-size: 48px;
+  color: #2d4059;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.about-header .intro {
+  font-size: 20px;
+  color: #555;
+  max-width: 900px;
+  line-height: 1.6;
+  margin: 0 auto;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Professional Summary */
+.about-content h2 {
+  font-size: 32px;
+  color: #2d4059;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: slideInLeft 1.2s ease-in-out;
+}
+
+.about-content p {
+  font-size: 18px;
+  color: #4f4f4f;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Skills Section */
+.skills-section h2 {
+  font-size: 32px;
+  color: #2d4059;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: slideInRight 1.3s ease-in-out;
+}
+
+.skills-section .skill-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.4s ease-in-out;
+}
+
+.skill-card i {
+  font-size: 36px;
+  color: #3f72af;
+  margin-bottom: 10px;
+}
+
+.skill-card h3 {
+  font-size: 20px;
+  color: #2d4059;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Career Goals Section */
+.career-goals {
+  margin-top: 40px;
+}
+
+.career-goals h2 {
+  font-size: 32px;
+  color: #2d4059;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: slideInLeft 1.4s ease-in-out;
+}
+
+.career-goals p {
+  font-size: 18px;
+  color: #4f4f4f;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.6s ease-in-out;
+}
+
+/* Download Resume Button */
+.cta-section {
+  margin-top: 40px;
+}
+
+.cta-button {
+  background-color: #f76c6c;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounceIn 1.5s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #c44536;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-15px);
+  }
+  60% {
+      transform: translateY(-7px);
+  }
+}

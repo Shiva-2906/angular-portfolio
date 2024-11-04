@@ -1,0 +1,108 @@
+/* Skills container with full-width background and reduced side gaps */
+.skills-container {
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #ffafbd, #ffc3a0, #ff7e5f, #feb47b); /* New vibrant gradient colors */
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  border-radius: 0px; /* Removed border radius to stretch the background to edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Title styling */
+h1 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill category styling */
+.skill-category {
+  margin-bottom: 30px;
+}
+
+.skill-category h3 {
+  font-size: 1.8em;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Skills list styling */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Individual skill block styling with hover animation */
+.skill {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #ff7e5f; /* New color for the skill text */
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 10px;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill i {
+  margin-right: 10px;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  background-color: #ff7e5f; /* New hover effect */
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gradient animation for background */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .skill-category h3 {
+    font-size: 1.5em;
+  }
+
+  .skill {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2em;
+  }
+
+  .skill {
+    font-size: 1em;
+  }
+}

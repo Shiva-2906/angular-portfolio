@@ -1,0 +1,127 @@
+/* Full-page height with centered content */
+.education-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures it fills the entire viewport */
+  padding: 20px;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5, #f7797d); /* Vibrant animated gradient */
+  background-size: 200% 200%;
+  animation: backgroundShift 8s ease infinite; /* Background animation */
+}
+
+/* Container for the education cards */
+.education-container {
+  text-align: center;
+  background-color: #ffffff; /* Solid background for the container */
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Header for the education section */
+.education-container h1 {
+  font-size: 3rem;
+  color: #34495e;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Flexbox layout for education content */
+.education-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Increased gap between cards */
+}
+
+/* Styling for individual education cards */
+.education-item {
+  background-color: #f4f7ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling for education items */
+.education-item i {
+  color: #3498db;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Degree name styling */
+.education-item h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 15px 0;
+}
+
+/* University and year styling */
+.education-item p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Background animation */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation for the education items */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .education-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .education-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-item p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-container h1 {
+    font-size: 2rem;
+  }
+
+  .education-item h2 {
+    font-size: 1.3rem;
+  }
+
+  .education-item p {
+    font-size: 1rem;
+  }
+}
